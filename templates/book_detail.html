@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <table style="margin: 50px; width: 250px">
+    <tr>
+        <td>Books' Name</td>
+        <td>{{ book.1 }}</td>
+    </tr>
+    <tr>
+        <td>Author</td>
+        <td>{{ book.2 }}</td>
+    </tr>
+    <td>
+        <form action="{%  url 'delete_book' %}" method="POST">
+            <input type="hidden" name="book_id" value="{{ book.0 }}">
+            <input type="submit" value="Delete Button">
+        </form>
+    </td>
+
+    <td>
+
+    </td>
+    </table>
+
+{% endblock %}
